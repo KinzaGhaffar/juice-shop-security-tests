@@ -1,5 +1,4 @@
 # OWASP JUICE SHOP - WEB SECURITY TESTING - TERM PROJECT REPORT
-## -------------------------------- Group: SecureSprinters --------------------------------
 
 # About
 Our project focuses on web application security testing, specifically utilizing static and dynamic analysis tools available for this purpose. As our target application, we selected OWASP Juice Shop, an intentionally vulnerable open-source application designed for testing web security tools. We aim to demonstrate the effectiveness of various security testing tools in a real-world context without legal constraints.
