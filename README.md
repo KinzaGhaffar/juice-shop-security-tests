@@ -51,9 +51,9 @@ In this scan, the major vulnerability that we received from NodeJsScan is regard
 
 To get clear understanding of this issue, we can elaborate it with this example:
 - We import the crypto module, which provides cryptographic feature.
-- Then define a string **dataForHash** that we want to hash.
-- For MD5 hashing, we create a hash object using **crypto.createHash('md5')** just like in the below picture. Then update it with the data to be hashed using **.update(dataToHash)**, and finally convert it to get the hexadecimal hash value using **.digest('hex')**.
-- 
+- Then define a string `dataForHash` that we want to hash.
+- For MD5 hashing, we create a hash object using `crypto.createHash('md5')` just like in the below picture. Then update it with the data to be hashed using **.update(dataToHash)**, and finally convert it to get the hexadecimal hash value using `.digest('hex')`.
+ 
 ![Docker](https://github.com/KinzaGhaffar/juice-shop-security-tests/blob/main/images/nodejsscan/7.png)
 
 In the screenshot, we can check the issue severity which is warning and we can also locate the code in the file where the issue actually persists:
@@ -61,18 +61,18 @@ In the screenshot, we can check the issue severity which is warning and we can a
 ![Docker](https://github.com/KinzaGhaffar/juice-shop-security-tests/blob/main/images/nodejsscan/8.png)
 
 # Solution:
-This tool also provides the hint for possible solution to recover the application from this error. The solution to this problem is to replace MD5 with a more secure hashing algorithm, which can be SHA-256 (Secure Hash Algorithm 256-bit), SHA-3 (Secure Hash Algorithm 3), or bcrypt, which are designed to be more resistant to these kinds of cryptographic attacks. These algorithms provide stronger security guarantees and are recommended for use in modern applications where data security is a major concern for client.
+This tool also provides the hint for possible solution to recover the application from this error. The solution to this problem is to replace MD5 with a more secure hashing algorithm, which can be `SHA-256` (Secure Hash Algorithm 256-bit), `SHA-3` (Secure Hash Algorithm 3), or `bcrypt`, which are designed to be more resistant to these kinds of cryptographic attacks. These algorithms provide stronger security guarantees and are recommended for use in modern applications where data security is a major concern for client.
 Lets take a example of SHA-256 hashing algorithm:
-- Similar to MD5, for SHA-256 hashing, we generate a hash object with the  help of using this function, crypto.createHash('sha256').
-- Then update it with the data to be hashed using .update(dataForHash).
-- Finally, convert it to get the hexadecimal hash value using .digest('hex').
+- Similar to `MD5`, for SHA-256 hashing, we generate a hash object with the  help of using this function, `crypto.createHash('sha256')`.
+- Then update it with the data to be hashed using `.update(dataForHash)`.
+- Finally, convert it to get the hexadecimal hash value using `.digest('hex')`.
 
 
 ## OWASP ZAP 
 OWASP ZAP (Zed Attack Proxy) is an open-source web application security scanner maintained by the Open Web Application Security Project (OWASP). It is designed to help users identify security vulnerabilities in web applications during development and testing phases. ZAP provides various features such as automated scanning, manual testing tools, and a powerful API for integration with other tools and workflows. The Zed Attack Proxy (ZAP) is one of the world’s most popular free security tools and it can help you automatically find security vulnerabilities in your web applications while you are developing and testing your applications.
 
 ## Automated Testing
-In the initial step of using ZAP (Zed Attack Proxy) for security assessments on websites, enter the target site's URL and select "Active Attack." This starts ZAP's attack process, which involves methodically scanning the website for flaws, warnings, and vulnerabilities. ZAP offers comprehensive comments and recommendations for improving the website's security as the attack goes on. ZAP simulates actual attack scenarios by sending payloads to the website while it is in active attack mode.
+In the initial step of using ZAP (Zed Attack Proxy) for security assessments on websites, enter the target site's URL and select `Active Attack`. This starts ZAP's attack process, which involves methodically scanning the website for flaws, warnings, and vulnerabilities. ZAP offers comprehensive comments and recommendations for improving the website's security as the attack goes on. ZAP simulates actual attack scenarios by sending payloads to the website while it is in active attack mode.
 
 ![Automated Testing](https://github.com/KinzaGhaffar/juice-shop-security-tests/blob/main/images/zap/1.png)
 
