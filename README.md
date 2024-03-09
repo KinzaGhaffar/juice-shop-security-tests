@@ -3,7 +3,7 @@
 # About
 Our project focuses on web application security testing, specifically utilizing static and dynamic analysis tools available for this purpose. As our target application, we selected OWASP Juice Shop, an intentionally vulnerable open-source application designed for testing web security tools. We aim to demonstrate the effectiveness of various security testing tools in a real-world context without legal constraints.
 
-# Testing Types
+# Testing
 - Static Analysis Security Testing (SAST)
 - Dynamic Analysis Security Testing (DAST)
 
@@ -17,7 +17,7 @@ Our project focuses on web application security testing, specifically utilizing 
 
 These tools were chosen based on their popularity and effectiveness in testing web application security.
 
-# Practical investigation
+# Practical Investigation
 ## NodeJsScan
 NodeJsScan is a static security code scanner for Node.js applications. It's designed to automatically review `Node.js` application code for security flaws and vulnerabilities. It analyzes the source code to find security issues that could potentially lead to security breaches, such as SQL injection, Cross-Site Scripting (XSS), command injection, and more. It was developed to fill the gap in web security analysis landscape, by focusing on server-side aspect of JavaScript, which was previously overlooked by existing SAST tools. NodeJsScan can be used as a standalone application or integrated with Continuous Integration (CI) tools to automate security testing. It supports various JavaScript and TypeScript frameworks used in Node.js development and provides detailed reports on the findings to aid in the remediation process. (Abraham, 2024).
 
